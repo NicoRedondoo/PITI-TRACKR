@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="#9913F0"
+    android:padding="10dp">
+
+    <!-- Icono de estadísticas -->
+    <ImageButton
+        android:id="@+id/statsButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/grafix"
+        android:layout_marginStart="20dp"
+        android:contentDescription="Ver estadísticas"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent" />
+
+    <!-- Icono de cigarro y contador -->
+    <RelativeLayout
+        android:id="@+id/smokeCounterLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingStart="10dp">
+
+        <ImageButton
+            android:id="@+id/smokeIconButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:contentDescription="Icono de cigarro"
+            android:src="@drawable/cigarettewhite2" />
+
+        <TextView
+            android:id="@+id/counterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:layout_toEndOf="@id/smokeIconButton"
+            android:layout_centerVertical="true"
+            android:paddingStart="15dp" />
+    </RelativeLayout>
+</RelativeLayout>
