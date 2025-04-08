@@ -1,9 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#362D4A">
 
+    <!-- Upper bar -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -88,7 +89,7 @@
 
     <!-- Título -->
     <TextView
-        android:text="PitiTrackr"
+        android:text="Tus logros"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
@@ -98,37 +99,26 @@
         android:layout_height="wrap_content"
         android:gravity="center" />
 
+    <!-- Lista de logros -->
+    <ListView
+        android:id="@+id/achievementList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/white"
+        android:dividerHeight="1dp"
+        android:padding="8dp" />
 
-
-    <ImageButton
-        android:id="@+id/smokeButton"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="150dp"
-        android:background="@drawable/background_button"
-        android:contentDescription="Boton"
-        android:scaleType="centerInside"
-        android:src="@drawable/img_button"
-        />
-
-
-    <!-- Botón de volver FIJO en la parte inferior -->
+    <!-- Botón de volver -->
     <Button
         android:id="@+id/btnBack"
         android:text="Volver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#FFFFFF"
         android:textColor="#362D4A"
-        android:textStyle="bold"/>
-
-    <com.example.pititrackr.ConfettiView
-        android:id="@+id/confettiView"
-        android:layout_width="match_parent"
-        android:layout_height="1000dp"
-        android:visibility="invisible" />
-
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"/>
 </LinearLayout>

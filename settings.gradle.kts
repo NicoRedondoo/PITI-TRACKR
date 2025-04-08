@@ -16,9 +16,12 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
+        maven { url = uri("https://jitpack.io")
     }
 }
 
 rootProject.name = "PitiTrackr"
-include(":app")
- 
+include(":app")}
+include(":pititrackrwereable")
+include(":wear")

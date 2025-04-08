@@ -1,9 +1,9 @@
 package com.example.pititrackr
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 
 class UpperBar : Fragment() {
@@ -12,6 +12,14 @@ class UpperBar : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.upper_bar, container, false)
+        val view = inflater.inflate(R.layout.upper_bar, container, false)
+
+        val medalButton = view.findViewById<ImageButton>(R.id.medalButton)
+        medalButton.setOnClickListener {
+            val intent = Intent(requireContext(), AchievementsActivity::class.java)
+            startActivity(intent)
+        }
+
+        return view
     }
 }

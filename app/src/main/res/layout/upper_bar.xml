@@ -2,49 +2,70 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="70dp"
-    android:background="#9913F0"
-    android:padding="10dp">
+    android:background="@drawable/background_gradient"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="10dp">
 
     <!-- Icono de estadísticas -->
     <ImageButton
         android:id="@+id/statsButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/grafix"
-        android:layout_marginStart="20dp"
-        android:contentDescription="Ver estadísticas"
-        android:layout_alignParentLeft="true"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/stats2"
+        android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
+        android:contentDescription="Ver estadísticas"
         android:background="@android:color/transparent" />
 
-    <!-- Icono de cigarro y contador -->
-    <RelativeLayout
-        android:id="@+id/smokeCounterLayout"
+
+    <!-- Contenedor medallas y cigarros -->
+    <LinearLayout
+        android:id="@+id/rightInfoLayout"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:paddingStart="10dp">
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
+        <!-- Botón de medalla -->
+        <ImageButton
+            android:id="@+id/medalButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/medal"
+            android:contentDescription="Ver logros"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Contador de medallas -->
+        <TextView
+            android:id="@+id/medalCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Icono cigarro -->
         <ImageButton
             android:id="@+id/smokeIconButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:background="@android:color/transparent"
-            android:layout_centerVertical="true"
+            android:src="@drawable/cigarettewhite2"
             android:contentDescription="Icono de cigarro"
-            android:src="@drawable/cigarettewhite2" />
+            android:layout_marginEnd="4dp" />
 
+        <!-- Contador cigarros -->
         <TextView
             android:id="@+id/counterTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
-            android:fontFamily="sans-serif-black"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
-            android:layout_toEndOf="@id/smokeIconButton"
-            android:layout_centerVertical="true"
-            android:paddingStart="15dp" />
-    </RelativeLayout>
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-black" />
+    </LinearLayout>
 </RelativeLayout>
